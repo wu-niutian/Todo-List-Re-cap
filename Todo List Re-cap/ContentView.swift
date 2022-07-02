@@ -18,7 +18,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(todos) { todo in
-                Text(todo.title)
+                HStack {
+                    Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")
+                    Text(todo.title)
+                        .strikethrough(todo.isCompleted)
+                    // it is onni strikethroughed if it is completed
+                }
             }
             .navigationTitle("Todos")
         }
