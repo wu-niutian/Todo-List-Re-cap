@@ -22,7 +22,7 @@ struct TodoDetailView: View {
                 Text("Mark as \(todo.isCompleted ? "incompleted" : "completed" )")
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(.teal)
+                    .background(todo.isCompleted ? .teal : .purple)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding()

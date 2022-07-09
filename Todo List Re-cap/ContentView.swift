@@ -21,7 +21,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach($todos) { $todo in
-                    NavigationLink {
+                    NavigationLink { //navigation link will send you to the VIEW that u wish to go, in this case, it is the TodoDetailView
                         TodoDetailView(todo: $todo)
                     } label: {
                         HStack {
