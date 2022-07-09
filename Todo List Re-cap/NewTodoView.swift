@@ -11,8 +11,8 @@ struct NewTodoView: View {
     
     @State var todoTitle = ""
     @Binding var todos: [Todo]
-//    @Environment(\.dismiss) var dismiss // can name the var any name //this is the dismiss environment variable
-    @Environment (\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss // can name the var any name //this is the dismiss environment variable
+   // @Environment (\.presentationMode) var presentationMode
     
     var body: some View {
         Form {
@@ -21,8 +21,8 @@ struct NewTodoView: View {
             Button("Save Todo") {
               let todo = Todo(title: todoTitle)
                 todos.append(todo)
-//                dismiss()
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
+                //presentationMode.wrappedValue.dismiss()
             }
         }
     }

@@ -17,10 +17,10 @@ struct TodoDetailView: View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
             Button {
-                print("Tapped")
+                todo.isCompleted.toggle()
             } label: {
                 Text("Mark as \(todo.isCompleted ? "incompleted" : "completed" )")
-                    .frame(minWidth: .infinity)
+                    .frame(maxWidth: .infinity)
                     .padding()
                     .background(.teal)
                     .foregroundColor(.white)

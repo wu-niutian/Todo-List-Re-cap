@@ -46,15 +46,15 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button {
-                        
+                        isSheetPresented = true
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
             }
-        }
-        .sheet(isPresented: $isSheetPresented) {
-            NewTodoView(todos: $todos)
+            .sheet(isPresented: $isSheetPresented) {
+                NewTodoView(todos: $todos)
+            }
         }
     }
     
